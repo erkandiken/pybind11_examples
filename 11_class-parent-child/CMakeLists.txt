@@ -1,6 +1,9 @@
-cmake_minimum_required(VERSION 2.8.12)
+cmake_minimum_required(VERSION 3.19.0)
 project(example)
 
+set(Python3_FIND_VIRTUALENV FIRST)
+find_package(PythonLibs)
+find_package(PythonInterp)
 set (CMAKE_CXX_STANDARD 14)
 
 add_subdirectory(pybind11)
